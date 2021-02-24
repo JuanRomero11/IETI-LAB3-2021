@@ -1,4 +1,4 @@
-  
+
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -10,26 +10,26 @@ import LockIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import './Login.css';
-import {BrowserRouter as Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route,Link } from 'react-router-dom';
 
-export default class Login extends React.Component{
-     constructor(props){
-      super(props);
-      localStorage.setItem('username', 'juan.romero@correox.com');
-      localStorage.setItem('password', 'password');
+export default class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        localStorage.setItem('username', 'juan.romero@correox.com');
+        localStorage.setItem('password', 'password');
     }
-     validateData(event){
-      let username = document.getElementById("email").value;
-      let password = document.getElementById("password").value;
-      if (localStorage.getItem("username") ===  username && localStorage.getItem("password") === password){
-        localStorage.setItem('isLogginIn', 'true');
-      }
+    validateData(event) {
+        let username = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        if (localStorage.getItem("username") === username && localStorage.getItem("password") === password) {
+            localStorage.setItem('isLogginIn', 'true');
+        }
     }
-    render(){
+    render() {
         return (
             <React.Fragment>
                 <CssBaseline />
-                <main className="layout"> 
+                <main className="layout">
                     <Paper className="paper">
                         <Avatar className="avatar" >
                             <LockIcon />
@@ -49,30 +49,30 @@ export default class Login extends React.Component{
                                     autoComplete="current-password"
                                 />
                             </FormControl>
-                            
+
                             <div>
-                            <Link to="/Drawer">
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                color="primary"
-                                className="submit"
-                                onClick= {() => this.validateData()}>
-                                    LOGIN
+                                <Link to="/Drawer">
+                                    <Button
+                                        type="submit"
+                                        fullWidth
+                                        variant="contained"
+                                        color="primary"
+                                        className="submit"
+                                        onClick={() => this.validateData()}>
+                                        LOGIN
                                 </Button>
-                            </Link>
-                        </div>
-                        <div className="icon">
-                            <Link to="/Account" alignItems="center">
-                                    <Button 
-                                    color="primary"
-                                    fullWidth
+                                </Link>
+                            </div>
+                            <div className="icon">
+                                <Link to="/Account" alignItems="center">
+                                    <Button
+                                        color="primary"
+                                        fullWidth
                                     >
                                         Create Account
                                     </Button>
-                            </Link>
-                        </div>
+                                </Link>
+                            </div>
                         </form>
                     </Paper>
                 </main>

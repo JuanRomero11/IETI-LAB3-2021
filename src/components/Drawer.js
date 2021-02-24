@@ -103,7 +103,6 @@ function ResponsiveDrawer(props) {
           color="primary"
           onClick={() => logout()}
           startIcon={<ExitToApp />}
-
         >
           Log out
           </Button>

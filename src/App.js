@@ -35,7 +35,6 @@ class App extends React.Component {
             </Route>
             <Route exact path="/Drawer">
               {this.state.isLogginIn && (<Drawer />)}
-      
             </Route>
           </Switch>
         </div>
