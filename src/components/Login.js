@@ -1,3 +1,4 @@
+  
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -8,7 +9,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import LockIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import './Login.css'
+import './Login.css';
+import {BrowserRouter as Link} from 'react-router-dom';
 
 export default class Login extends React.Component{
      constructor(props){
@@ -47,17 +49,30 @@ export default class Login extends React.Component{
                                     autoComplete="current-password"
                                 />
                             </FormControl>
+                            
+                            <div>
+                            <Link to="/Drawer">
                             <Button
                                 type="submit"
                                 fullWidth
                                 variant="contained"
                                 color="primary"
                                 className="submit"
-                                onClick= {() => this.iniciarSesion()}
-                            
-                            >
-                            login
-                            </Button>
+                                onClick= {() => this.validateData()}>
+                                    LOGIN
+                                </Button>
+                            </Link>
+                        </div>
+                        <div className="icon">
+                            <Link to="/Account" alignItems="center">
+                                    <Button 
+                                    color="primary"
+                                    fullWidth
+                                    >
+                                        Create Account
+                                    </Button>
+                            </Link>
+                        </div>
                         </form>
                     </Paper>
                 </main>

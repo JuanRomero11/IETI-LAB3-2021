@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './components/Login';
+import Drawer from "./components/Drawer";
 const LoginView = () => (
+  
   <Login />
 );
 class App extends React.Component {
@@ -22,19 +24,22 @@ class App extends React.Component {
   render() {
 
     return (
-      <div className="App">
-        <Router>
-          <div className="App">
-           
-            <ul>
-              {!this.state.isLogginIn && (<li><Link to="/login">Login</Link></li>)}
-            </ul>
-            <div>
+      <Router exact path="/">
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <Login />
+            </Route>
+            <Route exact path="/Login">
               {!this.state.isLogginIn && (<Route exact path="/login" component={LoginView} />)}
-            </div>
-          </div>
-        </Router>
-      </div>
+            </Route>
+            <Route exact path="/Drawer">
+              {this.state.isLogginIn && (<Drawer />)}
+      
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
