@@ -50,14 +50,22 @@ se utiliza la clase serviceWorker para que la aplicacion trabaje offline.
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://lit-sands-09854.herokuapp.com/)
 
 Credenciales para realizar el login 
-username : juan.romero@correox.com
-password : password
 
-De no servir el path /Drawer al realizar el login correctamente recargar la pagina
+username : juan.romero@correox.com
+
+password : password
 
 8. Deploy your App as an Azure Webapp (https://devblogs.microsoft.com/premier-developer/deploying-react-apps-to-azure-with-azure-devops/)
 
 No puedo realizar el despliegue en Azure debido a que no tengo creditos en la plataforma ya que los he 
-gastado en otras materias.
+gastado en otras materias, debido a esto se realiza el despliegue en firebase una de las plataformas recomendadas en moodle
+
+[![Deployed to Firebase](https://firebase.google.com/images/brand-guidelines/logo-standard.png?hl=es)](https://ietilab3.web.app/)
+
+Credenciales para realizar el login 
+
+username : juan.romero@correox.com
+
+password : password
 
 9. Submit your github repo along with the heroku and azure url of your solution!
