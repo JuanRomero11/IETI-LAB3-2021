@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Drawer from "./components/Drawer";
 const LoginView = () => (
-  
   <Login />
 );
 class App extends React.Component {
@@ -19,7 +18,7 @@ class App extends React.Component {
     this.setState({
       isLogginIn: localStorage.getItem("isLogginIn")
     })
-  }
+  }  
 
   render() {
 
